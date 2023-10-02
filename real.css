@@ -1,0 +1,112 @@
+/* Animation for the gradient background */
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* For mobile devices or smaller screens */
+@media (max-width: 768px) {
+   #bootstrapForm {
+       max-width: 100%; /* Allow the form to take full width on smaller screens */
+       box-sizing: border-box; /* To ensure padding doesn't add extra width */
+   }
+}
+
+
+
+/* Global styles for the body */
+body {
+   font-family: "regola";
+   font-weight: 400;
+   color: rgb(0, 0, 0);
+   background-color: #070000;
+}
+
+/* Blink animation for the "limited offer" section */
+@keyframes blink {
+   0% {opacity: 1;}
+   50% {opacity: .5;}
+   100% {opacity: 1;}
+}
+
+
+/* Styling for the main form */
+#bootstrapForm {
+    background-image: linear-gradient(to right, #ffa90a, #65d9f6);
+    background-size: 200% auto;
+    animation: gradientAnimation 7s linear infinite;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2), 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Styling for buttons */
+.btn {
+    transition: all 0.3s ease;
+    padding: 10px 30px;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background: linear-gradient(to left, #7ff5ac, #4e24e9);
+    border-radius: 25px;
+    padding: 15px 30px;
+    cursor: pointer;
+}
+
+.btn-primary {
+    color: white;
+    padding: 10px 30px;
+    border-radius: 25px;
+    background-color: #007bff;
+    border-color: #007bff;
+    margin-top: 30px;
+}
+
+.btn-secondary {
+    color: white;
+    padding: 10px 30px;
+    border-radius: 25px;
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+.submit-button {
+    color: white;
+    padding: 10px 30px;
+    border-radius: 25px;
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+/* By default, hide form sections until navigated to by user */
+.form-section {
+    display: none;
+}
+
+
+.date-input {
+    color: rgb(0, 0, 0);
+    text-align: center;
+}
+
+
+.form-section {
+    display: none;
+}
+
+#introduction-section {
+    display: block;
+}
+/* Initially hide the submit button */
+input[type='submit'] {
+    display: none;
+}
+
+/* Class to show the submit button when required */
+.section-submit {
+    display: block !important;
+}
